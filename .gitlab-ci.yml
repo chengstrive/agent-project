@@ -1,0 +1,9 @@
+deploy-wd-www:
+  stage: deploy
+  script:
+    - curl http://localhost:9005/sys/fetch_changesets?key=kz7CvtnchIkDna1MyB6B&id=2
+  only:
+    - master
+    - develop
+  tags:
+    - deploy-wd-www
